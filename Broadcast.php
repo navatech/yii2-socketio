@@ -68,8 +68,8 @@ class Broadcast
                 throw new Exception('Event should implement EventSubInterface');
             }
 
-            Yii::$app->db->close();
-            Yii::$app->db->open();
+            //Yii::$app->db->close();
+            //Yii::$app->db->open();
 
             if (true === $event instanceof EventPolicyInterface && false === $event->can($data)) {
                 return;
